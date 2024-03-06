@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <style>
+    .jumbotron {
+      margin-bottom: 0px;
+      background-image: url("{% static 'image/backround.jpg' %}"); /* Set the background image */
+      background-size: cover; /* Cover the entire section with the background image */
+      background-position: right; /* Position the background image to the right */
+      padding: 100px; /* Add padding for better aesthetics */
+      text-align: right; /* Align text to the right */
+    }
+    
+    .btn.btn-lg.btn-info {
+      padding: 8px 16px; /* Adjust button padding */
+      font-size: 14px; /* Adjust button font size */
+      border-radius: 5px; /* Add some border radius for a nicer look */
+      background-color: #4a8743; /* Set button background color */
+      border-color: #4a8743; /* Set button border color */
+      color: #ffffff; /* Set button text color */
+    }
+    
+    .btn.btn-lg.btn-info:hover {
+      background-color: #356d35; /* Change button background color on hover */
+      border-color: #356d35; /* Change button border color on hover */
+    }
+
+    .display-3.text-info {
+      color: #4a8743; /* Set the title color */
+    }
+  </style>
+</head>
+
+<body>
+  {% include "exam/navbar.html" %}
+  <br>
+  <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+      <h2 class="display-3 text-info">EcoChamps</h2>
+      <p class="display-4 d-none d-sm-block">Los geht's!</p>
+      <p class="lead">Melde dich an oder Konto erstellen</p>
+
+      <p><strong> Worauf wartest du noch?</strong></p>
+      <a href="/student/studentsignup" class="btn btn-lg btn-info"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Konto erstellen</a>
+    </div>
+  </section>
+  {% include "exam/footer.html" %}
+</body>
+
+</html>
